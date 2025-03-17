@@ -55,16 +55,16 @@
 
         /* next one starts here */
 
-        .box {
+        .boxthree {
             position: relative;
-            animation: geeks 5s infinite;
+            animation: geeks3 5s infinite;
             animation-play-state: paused;
         height: 200px;
         font-size: 40px;
          text-align: center;
         }
           
-        @keyframes geeks {
+        @keyframes geeks3 {
            0% {
                 left: 0px;
              top:0px;
@@ -74,14 +74,53 @@
           
                 
             }
+
+            20% {
+                left: 190px;
+             top:50px;
+              width: 314px;
+                 background: rgb(19, 174, 179);
+             border-radius: 10%;
+          
+                
+            }
+
+            35% {
+                right: 30px;
+             top:356px;
+              width: 328px;
+                 background: rgb(71, 99, 75);
+             border-radius: 90%;
+          
+                
+            }
+
             50% {
                 left: 250px;
               background: orange;
               top:40px;
                width: 250px;
                   border-radius: 50%;
+                }
             
+            70% {
+                left: 150px;
+              background: rgb(255, 238, 205);
+              top:90px;
+               width: 200px;
+                  border-radius: 25%;
             }
+
+            80% {
+                left: 0px;
+             top:450px;
+              width: 300px;
+                 background: rgb(121, 33, 129);
+             border-radius: 200%;
+          
+                
+            }
+
               100% {
                 left: 500px;
              top:80px;
@@ -92,20 +131,20 @@
             }
         }
 
-  .box.horizTranslate {
+  .boxthree.horizTranslate {
             animation-play-state: running;
         }
           
 
 /* makes it so it starts and stops when you hover over the div */
 
-   .box:hover {
+   .boxthree:hover {
             animation-play-state: running;
         }
     </style>
 </head>
 <body>
-    <button class='toggleButton' onclick='toggleTransition()'>Toggle</button>
+    <button class='toggleButton1' onclick='toggleTransition1()'>Toggle</button>
 <p>
         Hover over the GeeksforGeeks 
         to run the animation.
@@ -115,13 +154,13 @@
 
 <!-- next one starts here -->
 
-<button class='toggleButton' onclick='toggleTransition()'>Toggle</button>
+<button class='toggleButton2' onclick='toggleTransition2()'>Toggle</button>
 <p>
         Hover over the GeeksforGeeks 
         to run the animation.
     </p>
   
-    <div class="box">GeeksforGeeks</div>
+    <div class="boxthree">GeeksforGeeks</div>
 
 
 
@@ -129,7 +168,7 @@
         var boxOne = document.getElementsByClassName('box')[0];
 var running = false;
 
-var toggleTransition = function() {
+var toggleTransition1 = function() {
   if(!running) 
   { 
     boxOne.classList.add('horizTranslate');
@@ -142,15 +181,15 @@ var toggleTransition = function() {
 
 // next one starts here
 
-var boxOne = document.getElementsByClassName('box')[0];
+var boxOnethree = document.getElementsByClassName('boxthree')[0];
 var running = false;
 
-var toggleTransition = function() {
+var toggleTransition2 = function() {
   if(!running) 
   { 
-    boxOne.classList.add('horizTranslate');
+    boxOnethree.classList.add('horizTranslate');
   } else {
-    boxOne.classList.remove('horizTranslate'); 
+    boxOnethree.classList.remove('horizTranslate'); 
   }  
 
   running = !running;
