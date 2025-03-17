@@ -7,14 +7,14 @@
     <style>
         .box {
             position: relative;
-            animation: geeks 1s infinite;
+            animation: geeks1 1s infinite;
             animation-play-state: paused;
         height: 80px;
         font-size: 80px;
       
         }
           
-        @keyframes geeks {
+        @keyframes geeks1 {
            0% {
                 left: 0px;
                  background: red;
@@ -43,20 +43,34 @@
     
     /* next one starts here */
 
-.box {
+.boxthree {
             position: relative;
-            animation: geeks 1s infinite;
+            animation: geeks2 2s infinite;
             animation-play-state: paused;
         height: 80px;
         font-size: 80px;
       
         }
           
-        @keyframes geeks {
+        @keyframes geeks2 {
            0% {
                 left: 0px;
                  background: red;
              color:yellow;
+             top:0px;
+                
+            }
+            40% {
+                left: 0px;
+                 background: rgb(4, 0, 255);
+             color:yellow;
+             top:0px;
+                
+            }
+            80% {
+                left: 0px;
+                 background: rgb(153, 0, 255);
+             color:rgb(0, 238, 255);
              top:0px;
                 
             }
@@ -68,20 +82,20 @@
             }
         }
 
-  .box.horizTranslate {
+  .boxthree.horizTranslate {
             animation-play-state: running;
         }
           
 
 /* makes it so it starts and stops when you hover over the div */
 
-   .box:hover {
+   .boxthree:hover {
             animation-play-state: running;
         }
     </style>
 </head>
 <body>
-    <button class='toggleButton' onclick='toggleTransition()'>Toggle</button>
+    <button class='toggleButton1' onclick='toggleTransition1()'>Toggle</button>
 <p>
         Hover over the GeeksforGeeks 
         to run the animation.
@@ -91,13 +105,13 @@
 
     <!-- next one starts here -->
 
-    <button class='toggleButton' onclick='toggleTransition()'>Toggle</button>
+    <button class='toggleButton2' onclick='toggleTransition2()'>Toggle</button>
 <p>
         Hover over the GeeksforGeeks 
         to run the animation.
     </p>
   
-    <div class="box">GeeksforGeeks</div>
+    <div class="boxthree">GeeksforGeeks</div>
 
 
 
@@ -105,7 +119,7 @@
         var boxOne = document.getElementsByClassName('box')[0];
 var running = false;
 
-var toggleTransition = function() {
+var toggleTransition1 = function() {
   if(!running) 
   { 
     boxOne.classList.add('horizTranslate');
@@ -118,15 +132,15 @@ var toggleTransition = function() {
 
 // next one starts here
 
-var boxOne = document.getElementsByClassName('box')[0];
+var boxOnethree = document.getElementsByClassName('boxthree')[0];
 var running = false;
 
-var toggleTransition = function() {
+var toggleTransition2 = function() {
   if(!running) 
   { 
-    boxOne.classList.add('horizTranslate');
+    boxOnethree.classList.add('horizTranslate');
   } else {
-    boxOne.classList.remove('horizTranslate'); 
+    boxOnethree.classList.remove('horizTranslate'); 
   }  
 
   running = !running;
