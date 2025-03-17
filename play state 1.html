@@ -98,5 +98,39 @@
     </p>
   
     <div class="box">GeeksforGeeks</div>
+
+
+
+    <script>
+        var boxOne = document.getElementsByClassName('box')[0];
+var running = false;
+
+var toggleTransition = function() {
+  if(!running) 
+  { 
+    boxOne.classList.add('horizTranslate');
+  } else {
+    boxOne.classList.remove('horizTranslate'); 
+  }  
+
+  running = !running;
+}
+
+// next one starts here
+
+var boxOne = document.getElementsByClassName('box')[0];
+var running = false;
+
+var toggleTransition = function() {
+  if(!running) 
+  { 
+    boxOne.classList.add('horizTranslate');
+  } else {
+    boxOne.classList.remove('horizTranslate'); 
+  }  
+
+  running = !running;
+}
+    </script>
 </body>
 </html>
