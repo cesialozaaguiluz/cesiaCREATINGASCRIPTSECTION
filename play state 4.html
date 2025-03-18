@@ -22,7 +22,7 @@
  
   margin-left: 10px;
     clip-path: circle(50% at 50% 50%);
-   animation: geeks 5s infinite;
+   animation: geeks1 5s infinite;
             animation-play-state: paused;
   margin-top: -20px;
 
@@ -51,7 +51,7 @@
   overflow: hidden;
         }
           
-        @keyframes geeks {
+        @keyframes geeks1 {
            0% {
                   margin-left: 50px;
              margin-top: -20px;
@@ -98,11 +98,11 @@
    /* next one starts here  */
    
 
-   .wayoutside {
+   .wayoutsidethree {
   width: 800px;
 
 }
-.outside {
+.outsidethree {
   display: inline-block;
    height: 300px;
     width: 300px;
@@ -110,23 +110,23 @@
    
 }
 
-.box3 {
-  background: white;
+.box3three {
+  background: rgb(36, 71, 42);
  
   margin-left: 10px;
     clip-path: circle(50% at 50% 50%);
-   animation: geeks 5s infinite;
+   animation: geeks2 5s infinite;
             animation-play-state: paused;
   margin-top: -20px;
 
  
   
 }
-.box2 {
+.box2three {
   height: 150px;
   line-height: 150px;  
 }
-.box {
+.boxthree {
   position: relative;
     width: 300px;
   top:150px;
@@ -140,11 +140,11 @@
             
   border-style: solid;
   border-width: 5px;
-  border-color: black;
+  border-color: rgb(30, 107, 107);
   overflow: hidden;
         }
           
-        @keyframes geeks {
+        @keyframes geeks2 {
            0% {
                   margin-left: 50px;
              margin-top: -20px;
@@ -168,6 +168,38 @@
              
                
           }
+          45% {
+                    margin-left: 100px;
+             margin-top: 20px;
+                 width: 80px;
+  height: 80px;
+             
+               
+          }
+          65% {
+                    margin-right: 100px;
+             margin-top: 20px;
+                 width: 120px;
+  height: 120px;
+             
+               
+          }
+          75% {
+                    margin-left: 110px;
+             margin-top: -20px;
+                 width: 80px;
+  height: 80px;
+             
+               
+          }
+          90% {
+                    margin-right: 200px;
+             margin-top: 40px;
+                 width: 80px;
+  height: 80px;
+             
+               
+          }
               100% {
                    margin-left: 210px;
                   margin-top: -20px;
@@ -177,21 +209,21 @@
             }
         }
 
-  .box3.horizTranslate {
+  .box3three.horizTranslate {
             animation-play-state: running;
         }
           
 
 /* makes it so it starts and stops when you hover over the div */
 
-   .box3:hover {
+   .box3three:hover {
             animation-play-state: running;
         }
     </style>
 
 </head>
 <body>
-    <button class='toggleButton' onclick='toggleTransition()'>Toggle</button>
+    <button class='toggleButton1' onclick='toggleTransition1()'>Toggle</button>
     <p>
             Hover over the GeeksforGeeks 
             to run the animation.
@@ -215,23 +247,23 @@
 
       <!-- next one starts here -->
 
-      <button class='toggleButton' onclick='toggleTransition()'>Toggle</button>
+      <button class='toggleButton2' onclick='toggleTransition2()'>Toggle</button>
       <p>
               Hover over the GeeksforGeeks 
               to run the animation.
           </p>
-        <div class="wayoutside">
-        <div class="outside">
-          <div class="box2"></div>
-          <div class="box">
-           <div class="box3">
+        <div class="wayoutsidethree">
+        <div class="outsidethree">
+          <div class="box2three"></div>
+          <div class="boxthree">
+           <div class="box3three">
           </div>
           </div>
         </div>
-            <div class="outside">
-          <div class="box2"></div>
-          <div class="box">
-           <div class="box3">
+            <div class="outsidethree">
+          <div class="box2three"></div>
+          <div class="boxthree">
+           <div class="box3three">
             </div>
           </div>
         </div>
@@ -243,7 +275,7 @@
     
     var running = false;
     
-    var toggleTransition = function() {
+    var toggleTransition1 = function() {
       if(!running) 
       { 
         boxOne.classList.add('horizTranslate');
@@ -259,19 +291,19 @@
 
     // next one starts here
 
-    var boxOne = document.getElementsByClassName('box3')[0];
-    var boxTwo = document.getElementsByClassName('box3')[1];
+    var boxOnethree = document.getElementsByClassName('box3three')[0];
+    var boxTwothree = document.getElementsByClassName('box3three')[1];
     
     var running = false;
     
-    var toggleTransition = function() {
+    var toggleTransition2 = function() {
       if(!running) 
       { 
-        boxOne.classList.add('horizTranslate');
-        boxTwo.classList.add('horizTranslate');
+        boxOnethree.classList.add('horizTranslate');
+        boxTwothree.classList.add('horizTranslate');
       } else {
-        boxOne.classList.remove('horizTranslate'); 
-         boxTwo.classList.remove('horizTranslate');
+        boxOnethree.classList.remove('horizTranslate'); 
+         boxTwothree.classList.remove('horizTranslate');
         
       }  
     
